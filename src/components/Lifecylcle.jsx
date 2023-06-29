@@ -1,7 +1,8 @@
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-import Another from "./Another";    
+import Another from "./Another"; 
+import Infinite from "./Infinite";   
 
 const Lifecylcle = () => {
   const [count, setCount] = useState(0);
@@ -22,7 +23,8 @@ const Lifecylcle = () => {
       <div >
         <button className="btn btn-primary" onClick={() => setAnotherState(!anotherState)}>Set Another State</button>
       </div>
-      {anotherState && <Another/>}
+      {anotherState && <Another/>} 
+        <Infinite />
     </div>
   );
 };
