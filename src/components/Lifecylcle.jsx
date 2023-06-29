@@ -20,9 +20,9 @@ const Lifecylcle = () => {
       <div className="text-secondary display-5">{count}</div>
 
       <div >
-        <button className="btn btn-primary" onClick={() => setCount(count + 1)}>Set Another State</button>
+        <button className="btn btn-primary" onClick={() => setAnotherState(!anotherState)}>Set Another State</button>
       </div>
-      <Another />
+      {anotherState && <Another/>}
     </div>
   );
 };
