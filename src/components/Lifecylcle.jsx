@@ -1,6 +1,7 @@
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
+import Another from "./Another";    
 
 const Lifecylcle = () => {
   const [count, setCount] = useState(0);
@@ -21,6 +22,7 @@ const Lifecylcle = () => {
       <div >
         <button className="btn btn-primary" onClick={() => setCount(count + 1)}>Set Another State</button>
       </div>
+      <Another />
     </div>
   );
 };
