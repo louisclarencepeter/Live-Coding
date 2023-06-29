@@ -7,7 +7,7 @@ function Infinite() {
 
   useEffect(() => {
     setState(!state);
-  }, 3000);
+  }, 5000);
   return <div>{state && "Hello"}</div>;
 }
 
