@@ -1,32 +1,59 @@
-# React
+# State
 
-## Introduction
+- In the simplest terms, a state can be refered to as the memory of the component
 
-React is a JavaScript library developed by Facebook that is widely used for building user interfaces. It allows developers to create reusable UI components and efficiently manage the state of their applications. React follows a component-based architecture, where the UI is broken down into small, independent components that can be composed together to form complex user interfaces.
+- Components often need to change what's on the screen as a result of an interation
 
-## Key Features
+  - Typing onto the input field should update the input field
+  - Clicking Buy Now button should put a product into the shopping cart
 
-1. **Component-Based Architecture**: React encourages developers to break down the UI into reusable components, which are self-contained and can be easily composed together.
+- A component need to remember things, such as current value of input field, current items in the shopping cart etc
 
-2. **Virtual DOM**: React makes use of a virtual DOM to efficiently update and render components.
+- In react, we call this kind of a component-specific memory as state
 
-3. **JSX**: JSX is an extension to JavaScript that allows developers to write HTML-like syntax within JavaScript code.
+## Why a regular variable isn't enough
 
-4. **One-Way Data Binding**: React follows a unidirectional data flow, where data is passed down from parent components to child components via props.
+- Changes to local variables won’t trigger renders. React doesn’t realize it needs to render the component again with the new data.
 
-5. **React Hooks**: Introduced in React 16.8, hooks are functions that allow developers to use state and other React features without writing a class.
+- Local variables don’t persist between renders. When React renders this component a second time, it renders it from scratch—it doesn’t consider any changes to the local variables.
 
-## Ecosystem and Tools
+## Handling data in a component invloves two things
 
-React has a vibrant ecosystem with a variety of tools and libraries that enhance the development experience. Some notable tools and libraries include:
+- Trigger React to render the component with new data (re-rendering).
 
-- React Router
-- Redux
-- Webpack
-- Babel
-- Jest
-- Create React App
+- Retain the data between renders.
 
-## Conclusion
+## The solution is to add a state variable
 
-React has revolutionized the way developers build user interfaces by introducing a component-based approach and efficient rendering techniques. Its popularity and extensive ecosystem make it a powerful tool for creating interactive and scalable web applications.
+- A state variable retain the data between renders.
+
+- Updating the state variable will trigger React to render the component again
+
+## Meet your first hook!
+
+- In React, useState, as well as any other function starting with ”use”, is called a Hook.
+
+- Hooks, let you 'hook into' different react features
+
+- State is just one of those features, you will meet other Hooks later.
+
+- When you call useState, you are telling React that you want the component to remember something!
+
+- In our example, we want React to remember the count
+
+**important**
+
+- Hooks can only be called at the top level of your components
+
+- You can’t call Hooks inside conditions, loops, or other nested functions.
+
+- State is isolated and private to the component; in other words, state is local to a component instance on the screen.
+
+# Responding to events
+
+- react lets you add event handlers to your JSX
+ -  `<button onClick={handleClick}>Click me</button>`
+
+- event handlers are functions that responds to events such as a click
+
+- By convention, it is common to name event handlers as handle followed by the event name. You’ll often see onClick={handleClick}, onMouseEnter={handleMouseEnter}, and so on.
