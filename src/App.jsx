@@ -5,7 +5,7 @@ import User from "./components/User";
 import Home from "./components/Home";
 
 function App() {
-  // const activeStyle = { textDecoration: "none", color: "pink" };
+
   return (
     <BrowserRouter>
       <div>
@@ -27,6 +27,12 @@ function App() {
             All-Users
           </NavLink>
         </nav>
+
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/users/*" element={<Home />} />
+          <Route path="/users/:id" element={<Home />} />
+        </Routes>
       </div>
     </BrowserRouter>
   );

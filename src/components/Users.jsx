@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, Routes, Route } from "react-router-dom";
+import User from "./User";
 
 const Users = () => {
   const [users, setUsers] = useState([]);
@@ -17,6 +18,9 @@ const Users = () => {
           <h4>{user.name}</h4>
         </Link>
       ))}
+      <Routes>
+        <Route path="id" element={<User />} />
+      </Routes>
     </div>
   );
 };
