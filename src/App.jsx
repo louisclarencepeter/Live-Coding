@@ -1,11 +1,10 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import { BrowserRouter, NavLink } from "react-router-dom";
+import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
 import Users from "./components/Users";
 import User from "./components/User";
 import Home from "./components/Home";
 
 function App() {
-
   return (
     <BrowserRouter>
       <div>
@@ -30,8 +29,8 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/users/*" element={<Home />} />
-          <Route path="/users/:id" element={<Home />} />
+          <Route path="/users" element={<Users />} />
+          <Route path="/users/:id" element={<User />} />
         </Routes>
       </div>
     </BrowserRouter>
