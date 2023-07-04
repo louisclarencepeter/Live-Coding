@@ -1,21 +1,24 @@
-import React from "react";
 import { useState, useEffect } from "react";
 import { Link, Routes, Route } from "react-router-dom";
 
-function Users() {
+const Users = () => {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/users")
-      .then((response) => response.json())
-      .then((json) => setUsers(json));
+      .then((reponse) => reponse.json())
+      .then((data) => setUsers(data));
   }, []);
-  
+
   return (
     <div>
-      <h1>Users</h1>
+      {users.map((user) => (
+        <Link key={user.id}>
+          <h4>{user.name}</h4>
+        </Link>
+      ))}
     </div>
   );
-}
+};
 
 export default Users;
