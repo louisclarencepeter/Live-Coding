@@ -1,10 +1,10 @@
 import Title from "./Title";
 
-function Navbar({ username }) {
+function Navbar() {
   return (
     <nav className="navbar bg-body-tertiary">
       <div className="container-fluid">
-        <Title username={username} />
+        <Title />
       </div>
     </nav>
   );
