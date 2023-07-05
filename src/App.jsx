@@ -3,12 +3,13 @@ import { useState } from "react";
 import Navbar from "./Navbar";
 
 function App() {
-  const [username, setUserName] = useState("Akira Kurosawa");
+  const [username] = useState("Akira Kurosawa");
 
-  return;
-  <>
-    <Navbar username={username} />
-  </>;
+  return (
+    <>
+      <Navbar username={username} />
+    </>
+  );
 }
 
 export default App;

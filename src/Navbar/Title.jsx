@@ -1,4 +1,4 @@
-function Title() {
+function Title({ username }) {
   return (
     <div>
       Welcome Back, <em>{username}</em>

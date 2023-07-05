@@ -1,6 +1,6 @@
 import Title from "./Title";
 
-function Navbar() {
+function Navbar({ username }) {
   return (
     <nav className="navbar bg-body-tertiary">
       <div className="container-fluid">
