@@ -1,3 +1,4 @@
+
 const places = [
   {
     id: 0,
