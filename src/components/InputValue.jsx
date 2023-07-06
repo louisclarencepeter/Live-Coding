@@ -18,7 +18,7 @@ function InputValue() {
             </form>
 
         </div>
-    );
+    );          
 }
 
 export default InputValue
